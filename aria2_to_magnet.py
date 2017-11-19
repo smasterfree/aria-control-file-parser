@@ -62,7 +62,7 @@ def parse_aria_control_file(file_name):
             info_hash = ""
             for ch in hash_binary:
                 hex_word = hex(ord(ch))[2:].zfill(2)
-                print hex_word
+                # print hex_word
 
                 info_hash += hex_word.upper()
 

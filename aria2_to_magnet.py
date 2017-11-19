@@ -1,5 +1,12 @@
 import struct
 import binascii
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-f", "--file", required=True,
+                    help="input file XXX.aria2")
+
+args = parser.parse_args()
 
 
 # ================================================================
@@ -40,14 +47,14 @@ def parse_aria_control_file(file_name):
             version = f.read(2)
 
             i = int(version.encode('hex'), 16)
-            print "version is " + str(i)
+            # print "version is " + str(i)
 
             # skip  EXT, find info  hash_binary length
             f.seek(6)
 
             length = f.read(4)
             hash_length = int(length.encode('hex'), 16)
-            print "hash length is " + str(hash_length)
+            # print "hash length is " + str(hash_length)
 
             # read next hash_length
             f.seek(10)  # Go to info hash
@@ -67,7 +74,8 @@ def parse_aria_control_file(file_name):
 
 
 if __name__ == '__main__':
-    parse_aria_control_file("dahufa.aria2")
+    file_name = args.file
+    parse_aria_control_file(file_name)
     # version is 1
     # hash length is 20
     # magnet:?xt=urn:btih:959E2ECEB954313D3869EFF7924CA7CD8DE739

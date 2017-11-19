@@ -43,3 +43,15 @@ also @alphatr write a tool transform .aria2 file to a magnet link use javascript
 # https://aria2.github.io/manual/en/html/technical-notes.html
 # ================================================================
 ```
+
+# how to run
+
+```
+python.exe aria2_to_magnet.py -f dahufa.aria2
+
+```
+
+output
+```
+magnet:?xt=urn:btih:959E2ECEB954313D3869EFF7924CA7CD8DE739
+```

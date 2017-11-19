@@ -47,7 +47,7 @@ also @alphatr write a tool transform .aria2 file to a magnet link use javascript
 # how to run
 
 ```
-python.exe aria2_to_magnet.py -f dahufa.aria2
+python aria2_to_magnet.py -f dahufa.aria2
 
 ```
 

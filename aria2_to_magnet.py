@@ -61,7 +61,8 @@ def parse_aria_control_file(file_name):
             hash_binary = f.read(hash_length)
             info_hash = ""
             for ch in hash_binary:
-                hex_word = hex(ord(ch))[2:]
+                hex_word = hex(ord(ch))[2:].zfill(2)
+                print hex_word
 
                 info_hash += hex_word.upper()
 
@@ -78,4 +79,4 @@ if __name__ == '__main__':
     parse_aria_control_file(file_name)
     # version is 1
     # hash length is 20
-    # magnet:?xt=urn:btih:959E2ECEB954313D3869EFF7924CA7CD8DE739
+    # magnet:?xt=urn:btih:959E2ECEB954313D38690EFF7924CA7CD80DE739

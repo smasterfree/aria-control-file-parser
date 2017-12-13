@@ -4,7 +4,7 @@ import binascii
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-f", "--file", required=True,
+parser.add_argument("file", nargs='+',
                     help="input file XXX.aria2")
 
 args = parser.parse_args()
@@ -76,8 +76,9 @@ def parse_aria_control_file(file_name):
 
 
 if __name__ == '__main__':
-    file_name = args.file
-    parse_aria_control_file(file_name)
+    file_list = args.file
+    for file_name in file_list:
+        parse_aria_control_file(file_name)
     # version is 1
     # hash length is 20
     # magnet:?xt=urn:btih:959E2ECEB954313D38690EFF7924CA7CD80DE739

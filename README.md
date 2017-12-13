@@ -44,14 +44,19 @@ also @alphatr write a tool transform .aria2 file to a magnet link use javascript
 # ================================================================
 ```
 
-# how to run
+## how to run
 
-```
-python aria2_to_magnet.py -f dahufa.aria2
-
+```bash
+python aria2_to_magnet.py dahufa.aria2
 ```
 
 output
 ```
 magnet:?xt=urn:btih:959E2ECEB954313D3869EFF7924CA7CD8DE739
 ```
+
+with multiple files
+```bash
+python aria2_to_magnet.py *.aria2
+```
+

@@ -1,15 +1,15 @@
 # aria-control-file-parser
 
-parse aria2c control file from cmd line.
+Parse aria2c control file from cmd line.
 
-I just find someone, also find a way to convert .aria2 file to magnet link.
+When use aria2c to download magnet, use ctrl+c to kill aria2c process, or system reboot or shutdown, then if you need to continue the download process, you have to find what the original magnet link.
 
-just see this issue(https://github.com/aria2/aria2/issues/792).
+See this issue(https://github.com/aria2/aria2/issues/792). 
 
-read the aria technical notes, the .aria2 (Control File) contain the hash info of
-the magnet link, so just parse the file.
+From the aria technical notes, the .aria2 (Control File) contain the hash info of
+the magnet link, so  parse the file we could get the original magnet link.
 
-also @alphatr write a tool transform .aria2 file to a magnet link use javascript.
+Also @alphatr write a tool transform .aria2 file to a magnet link use javascript.
 
 
 ```

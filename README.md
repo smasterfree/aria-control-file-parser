@@ -1,13 +1,14 @@
 # aria-control-file-parser
 
-Parse aria2c control file from cmd line.
+> Parse aria2c control file from cmd line.
 
-When use aria2c to download magnet, use ctrl+c to kill aria2c process, or system reboot or shutdown, then if you need to continue the download process, you have to find what the original magnet link.
+When you hit ctrl-C while downloading is still in progress, aria2 leaves control file. Running the same command line(you need to know the original link), aria2 starts resuming last download.  
+
+How can you resume a download without knowing the original download link?
+
+According to aria technical note, the .aria2 (Control File) contain the hash info of the magnet link, so parse the file we could get the original magnet link.
 
 See this issue(https://github.com/aria2/aria2/issues/792). 
-
-From the aria technical notes, the .aria2 (Control File) contain the hash info of
-the magnet link, so  parse the file we could get the original magnet link.
 
 Also @alphatr write a tool transform .aria2 file to a magnet link use javascript.
 

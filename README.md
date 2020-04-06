@@ -48,7 +48,7 @@ Also @alphatr write a tool transform .aria2 file to a magnet link use javascript
 ## how to run
 
 ```bash
-python aria2_to_magnet.py dahufa.aria2
+python3  aria2_to_magnet.py dahufa.aria2
 ```
 
 output
@@ -60,4 +60,10 @@ with multiple files
 ```bash
 python aria2_to_magnet.py *.aria2
 ```
+
+## python2
+
+use branch 
+
+https://github.com/smasterfree/aria-control-file-parser/tree/python2
 

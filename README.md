@@ -56,9 +56,14 @@ output
 magnet:?xt=urn:btih:959E2ECEB954313D3869EFF7924CA7CD8DE739
 ```
 
-with multiple files
+with multiple files, folder
 ```bash
-python aria2_to_magnet.py *.aria2
+python3 aria2_to_magnet.py dahufa.aria2 dahufa.aria2 ./folder
+```
+
+reading aria2 files from folder recursively
+```bash
+python3 aria2_to_magnet.py ./ -r
 ```
 
 ## python2
